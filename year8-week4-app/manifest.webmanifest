@@ -1,0 +1,16 @@
+{
+  "name": "IGS Durham — Year 8 Maths Homework Week 4",
+  "short_name": "Y8 Maths W4",
+  "description": "Self-marking Year 8 Maths homework: worded decimals, BIDMAS and negative numbers.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F8FC",
+  "theme_color": "#1B3A6B",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

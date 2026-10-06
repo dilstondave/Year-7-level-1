@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IGS Durham — Year 8 Maths Homework Week 4</title>
+<meta name="theme-color" content="#1B3A6B">
+<meta name="description" content="Year 8 Maths Week 4 self-marking homework: worded decimals, BIDMAS and negative numbers.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Y8 Maths W4">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B3A6B;--navy-dk:#122A50;--ok:#2D6A4F;--ok-bg:#D8F3DC;--ok-t:#1B4332;--no:#C1121F;--no-bg:#FFE5E5;--no-t:#7D0000;--bg:#F7F8FC;--srf:#FFFFFF;--bdr:#DDE3EE;--txt:#1A1F2E;--mut:#6B7280;--shd:0 2px 12px rgba(27,58,107,.08)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+.stripe{height:5px}.wrap{max-width:820px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.hdr{background:var(--srf);border:1px solid var(--bdr);border-radius:16px;padding:1.25rem 1.75rem;margin-bottom:1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:var(--shd)}
+.hdr-l{display:flex;align-items:center;gap:1.25rem}.htag{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--navy);text-transform:uppercase;margin-bottom:4px}
+.htitle{font-size:19px;font-weight:600;line-height:1.2}.hsub{font-size:12px;color:var(--mut);margin-top:3px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.pill{font-size:12px;color:var(--mut);border:1px solid var(--bdr);border-radius:99px;padding:4px 12px;background:var(--bg)}.pill.wk{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:500}
+.sbox{background:var(--srf);border:2px solid var(--navy);border-radius:16px;padding:1.1rem 1.5rem;margin-bottom:1.75rem;box-shadow:var(--shd)}.sbox h3{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:.875rem}
+.sfield{display:flex;flex-direction:column;gap:5px;max-width:340px}.sfield label{font-size:12px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.sfield input{font-family:'DM Sans',sans-serif;font-size:14px;height:38px;padding:0 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--bg);color:var(--txt);outline:none;transition:border-color .2s}
+.sfield input:focus{border-color:var(--navy);background:#fff}
+.prog-wrap{margin-bottom:1.75rem}.prog-lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:6px}
+.prog-tr{height:6px;background:var(--bdr);border-radius:99px;overflow:hidden}.prog-fl{height:6px;background:var(--navy);border-radius:99px;transition:width .35s;width:0%}
+.card{background:var(--srf);border:1px solid var(--bdr);border-radius:16px;margin-bottom:1.25rem;overflow:hidden;box-shadow:var(--shd)}
+.card-hd{padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bdr)}
+.sec-l{display:flex;align-items:center;gap:10px}.snum{width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stitle{font-size:15px;font-weight:600}.sscore{font-size:13px;color:var(--mut);font-family:'DM Mono',monospace}
+.card-bd{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:1.1rem}
+.qr{display:flex;flex-direction:column;gap:6px}.qt{font-size:14px;line-height:1.6}
+.m{font-family:'DM Mono',monospace;font-size:13px;background:#F0F4FF;color:var(--navy);padding:1px 6px;border-radius:4px}
+.ir{display:flex;align-items:center;gap:8px}
+.qi{font-family:'DM Sans',sans-serif;font-size:14px;height:36px;padding:0 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--bg);color:var(--txt);width:160px;outline:none;transition:border-color .2s,background .2s}
+.qi:focus{border-color:var(--navy);background:#fff}.qi.ok{border-color:var(--ok)!important;background:var(--ok-bg)!important;color:var(--ok-t)}.qi.no{border-color:var(--no)!important;background:var(--no-bg)!important;color:var(--no-t)}
+.ico{font-size:18px;font-weight:700;width:22px}.ico.ok{color:var(--ok)}.ico.no{color:var(--no)}
+.hint{font-size:12px;display:none}.hint.show{display:block}.hint.c{color:var(--ok)}.hint.w{color:var(--no)}
+.fbox{background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:.75rem 1rem;margin-bottom:.5rem;font-size:13px;color:var(--navy)}.fbox strong{font-weight:600}
+.venn-wrap{display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap}.venn-inp{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--mut)}.venn-inp label{display:flex;align-items:center;gap:8px}.venn-inp input{width:110px}
+.act-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:1.5rem;padding:1.25rem 1.5rem;background:var(--srf);border:1px solid var(--bdr);border-radius:16px;box-shadow:var(--shd)}
+.btn-m{background:var(--navy);color:#fff;border:none;border-radius:10px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .18s}.btn-m:hover{background:var(--navy-dk)}.btn-m:disabled{background:#9AA5B4;cursor:not-allowed}
+.btn-r{background:transparent;color:var(--mut);border:1.5px solid var(--bdr);border-radius:10px;padding:10px 18px;font-size:14px;font-family:'DM Sans',sans-serif;cursor:pointer}.btn-r:hover{border-color:var(--navy);color:var(--navy)}
+.act-ct{font-size:13px;color:var(--mut);margin-left:auto}
+.res{background:var(--srf);border:1px solid var(--bdr);border-radius:16px;padding:1.5rem;margin-top:1.5rem;display:none;box-shadow:var(--shd)}.res.show{display:block}
+.res-title{font-size:18px;font-weight:600;margin-bottom:1rem}.res-bw{height:8px;background:var(--bdr);border-radius:99px;overflow:hidden;margin-bottom:1rem}.res-bf{height:8px;border-radius:99px;background:var(--navy);transition:width .8s}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}.rc{background:var(--bg);border-radius:10px;padding:.875rem 1rem}.rn{font-size:26px;font-weight:600;font-family:'DM Mono',monospace}.rl{font-size:12px;color:var(--mut);margin-top:2px}
+.rmsg{font-size:13px;color:var(--mut);line-height:1.5;margin-bottom:1rem}
+.sec-bd{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:1rem}.stile{border-radius:10px;padding:.75rem .875rem;text-align:center}.stile .stn{font-size:20px;font-weight:600;font-family:'DM Mono',monospace}.stile .stl{font-size:11px;margin-top:2px;font-weight:500}
+.stile.g5{background:#D8F3DC;color:#1B4332}.stile.g4{background:#EBF5FB;color:#1B3A6B}.stile.g3{background:#FEF9E7;color:#7D6608}.stile.g2{background:#FDEBD0;color:#784212}.stile.g1{background:#FDEDEC;color:#7B241C}
+.ss-box{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--bdr)}.ss-lbl{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:.75rem}.ss-hint{font-size:13px;color:var(--mut);margin-bottom:.875rem}
+.ss-ta{width:100%;font-family:'DM Sans',sans-serif;font-size:13px;padding:10px 12px;border:1.5px solid var(--bdr);border-radius:8px;background:var(--bg);resize:vertical;outline:none;color:var(--txt)}
+.sub-st{margin-top:.875rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.ss-msg{padding:.875rem 1rem;border-radius:10px;font-size:13px;display:none}.ss-msg.show{display:block}
+.ss-msg.sending{background:#EBF5FB;color:#1B3A6B;border:1px solid #AED6F1}.ss-msg.sent{background:var(--ok-bg);color:var(--ok-t);border:1px solid #A9DFBF}.ss-msg.error{background:var(--no-bg);color:var(--no-t);border:1px solid #F5B7B1}
+.chal{background:var(--srf);border:1.5px solid #E8A020;border-radius:16px;padding:1.25rem 1.5rem;margin-top:1rem}
+.chal-lbl{font-size:11px;font-weight:700;letter-spacing:.1em;color:#E8A020;text-transform:uppercase;margin-bottom:8px}.chal-q{font-size:14px;line-height:1.65;margin-bottom:.875rem}
+.chal-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.cres{font-size:13px;font-weight:500}.cres.ok{color:var(--ok)}.cres.no{color:var(--no)}
+.stripe{background:linear-gradient(90deg,var(--navy),#1B6CA8)}
+.pill.inst{background:#fff;color:var(--navy);border-color:var(--navy);font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;display:none}.pill.inst.show{display:inline-block}
+.offl{display:none;background:#FEF9E7;color:#7D6608;border:1px solid #F7DC6F;border-radius:10px;padding:.6rem 1rem;font-size:13px;margin-bottom:1rem}.offl.show{display:block}
+.saved{font-size:12px;color:var(--mut);margin-top:6px}
+body{padding-bottom:env(safe-area-inset-bottom)}.wrap{padding-left:max(1.5rem,env(safe-area-inset-left));padding-right:max(1.5rem,env(safe-area-inset-right))}
+@media(max-width:560px){.res-grid{grid-template-columns:repeat(2,1fr)}.sec-bd{grid-template-columns:repeat(2,1fr)}.hdr{padding:1rem 1.1rem}.act-ct{margin-left:0}}
+</style>
+</head><body>
+<div class="stripe"></div><div class="wrap">
+<div class="hdr">
+  <div class="hdr-l"><img src="logo.webp" alt="IGS Durham" style="height:58px;width:auto;flex-shrink:0">
+  <div><div class="htag">The Independent Grammar School: Durham</div><div class="htitle">Year 8 Mathematics — Week 4 Homework</div><div class="hsub">Worded Decimals · BIDMAS · Negative Numbers &nbsp;·&nbsp; 25 questions · Self-marking</div></div></div>
+  <div class="pills"><span class="pill wk">Week 4</span><span class="pill" id="duePill">📅 Loading...</span><span class="pill">✏️ Show all working</span><button class="pill inst" id="btnInstall">⬇ Install app</button></div>
+</div>
+<div class="offl" id="offl">📴 You are offline. You can still answer and mark your homework — your work is saved on this device. Reconnect to submit.</div>
+<div class="sbox"><h3>📋 Your details — complete before starting</h3>
+  <div class="sfield"><label>Full Name <span style="color:var(--no)">*</span></label><input type="text" id="sName" placeholder="First and last name" autocomplete="name"></div>
+  <div class="saved">💾 Your answers save automatically on this device.</div>
+</div>
+<div class="prog-wrap"><div class="prog-lbl"><span id="pl">0 / 25 answered</span><span id="pp">0%</span></div><div class="prog-tr"><div class="prog-fl" id="pb"></div></div></div>
+<div class="card">
+  <div class="card-hd"><div class="sec-l"><div class="snum">1</div><span class="stitle">Worded decimal problems</span></div><span class="sscore" id="ss1">0 / 5</span></div>
+  <div class="card-bd">
+    <div class="fbox"><strong>Reminder:</strong> Re-read the question carefully. Line up decimal points. Check your answer makes sense in context.</div>
+    <div class="qr" data-ans="13.34"><div class="qt">Q1. A bag of apples costs <span class='m'>£3.49</span> and oranges cost <span class='m'>£2.87</span>. Sarah buys 3 bags of apples and 1 bag of oranges. Total cost?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="1" data-qn="1" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="2.55"><div class="qt">Q2. A plank is <span class='m'>4.75 m</span> long. A piece <span class='m'>2.20 m</span> is cut off. How much remains?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="1" data-qn="2" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="8.64"><div class="qt">Q3. A bottle holds <span class='m'>2.16 litres</span>. A shop orders 4 bottles. How many litres in total?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="1" data-qn="3" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="1.35"><div class="qt">Q4. Five friends share a bill of <span class='m'>£6.75</span> equally. How much each?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="1" data-qn="4" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="4.56"><div class="qt">Q5. A runner's four lap times are <span class='m'>1.14</span>, <span class='m'>1.08</span>, <span class='m'>1.12</span> and <span class='m'>1.22</span> minutes. Total time?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="1" data-qn="5" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-hd"><div class="sec-l"><div class="snum">2</div><span class="stitle">BIDMAS</span></div><span class="sscore" id="ss2">0 / 5</span></div>
+  <div class="card-bd">
+    <div class="fbox"><strong>Reminder:</strong> Brackets first, then Indices, then Division/Multiplication (left to right), then Addition/Subtraction (left to right).</div>
+    <div class="qr" data-ans="14"><div class="qt">Q6. Calculate: <span class='m'>2 + 3 × 4</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="2" data-qn="6" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="20"><div class="qt">Q7. Calculate: <span class='m'>(2 + 3) × 4</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="2" data-qn="7" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="10"><div class="qt">Q8. Calculate: <span class='m'>3² + 1</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="2" data-qn="8" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="7"><div class="qt">Q9. Calculate: <span class='m'>20 ÷ 4 + 2</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="2" data-qn="9" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="11"><div class="qt">Q10. Calculate: <span class='m'>3 + 4² ÷ 2</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="2" data-qn="10" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-hd"><div class="sec-l"><div class="snum">3</div><span class="stitle">BIDMAS — placing the brackets</span></div><span class="sscore" id="ss3">0 / 5</span></div>
+  <div class="card-bd">
+    <div class="fbox"><strong>Reminder:</strong> Add one pair of brackets to make the equation correct. Try different positions.</div>
+    <div class="qr" data-ans="(2+3)×4=20|(2+3)x4=20"><div class="qt">Q11. Add brackets to make this true: <span class='m'>2 + 3 × 4 = 20</span>. Write the full expression.</div><div class="ir"><input type="text" class="qi q-ans" data-sec="3" data-qn="11" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="(10-4)×3=18|(10-4)x3=18"><div class="qt">Q12. Add brackets to make this true: <span class='m'>10 − 4 × 3 = 18</span>.</div><div class="ir"><input type="text" class="qi q-ans" data-sec="3" data-qn="12" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="30"><div class="qt">Q13. Add brackets to get 30 from <span class='m'>3 + 2 × 6</span>. What is the answer?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="3" data-qn="13" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="(8+2)÷5=2|(8+2)/5=2"><div class="qt">Q14. Add brackets to make this true: <span class='m'>8 + 2 ÷ 5 = 2</span>.</div><div class="ir"><input type="text" class="qi q-ans" data-sec="3" data-qn="14" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="(6+4)×(3+2)=50|(6+4)x(3+2)=50"><div class="qt">Q15. Add brackets to make this true: <span class='m'>6 + 4 × 3 + 2 = 50</span>.</div><div class="ir"><input type="text" class="qi q-ans" data-sec="3" data-qn="15" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-hd"><div class="sec-l"><div class="snum">4</div><span class="stitle">Adding negative numbers</span></div><span class="sscore" id="ss4">0 / 5</span></div>
+  <div class="card-bd">
+    <div class="fbox"><strong>Reminder:</strong> + and − together = subtract. − and − together = more negative. Use a number line if it helps.</div>
+    <div class="qr" data-ans="2"><div class="qt">Q16. Calculate: <span class='m'>5 + (−3)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="4" data-qn="16" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="-1"><div class="qt">Q17. Calculate: <span class='m'>3 + (−4)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="4" data-qn="17" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="-7"><div class="qt">Q18. Calculate: <span class='m'>−4 + (−3)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="4" data-qn="18" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="0"><div class="qt">Q19. Calculate: <span class='m'>−6 + 6</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="4" data-qn="19" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="-3"><div class="qt">Q20. Temperature is <span class='m'>2°C</span> and drops by <span class='m'>5°C</span>. New temperature?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="4" data-qn="20" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-hd"><div class="sec-l"><div class="snum">5</div><span class="stitle">Subtracting negative numbers</span></div><span class="sscore" id="ss5">0 / 5</span></div>
+  <div class="card-bd">
+    <div class="fbox"><strong>Reminder:</strong> Subtracting a negative = adding a positive. a − (−b) = a + b. Two negatives make a positive.</div>
+    <div class="qr" data-ans="8"><div class="qt">Q21. Calculate: <span class='m'>5 − (−3)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="5" data-qn="21" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="2"><div class="qt">Q22. Calculate: <span class='m'>−1 − (−3)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="5" data-qn="22" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="-3"><div class="qt">Q23. Calculate: <span class='m'>−7 − (−4)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="5" data-qn="23" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="10"><div class="qt">Q24. Calculate: <span class='m'>4 − (−6)</span></div><div class="ir"><input type="text" class="qi q-ans" data-sec="5" data-qn="24" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+    <div class="qr" data-ans="7"><div class="qt">Q25. Edinburgh: <span class='m'>−3°C</span>. London: <span class='m'>4°C</span>. Difference in temperature?</div><div class="ir"><input type="text" class="qi q-ans" data-sec="5" data-qn="25" placeholder="your answer"><span class="ico"></span></div><div class="hint"></div></div>
+  </div>
+</div>
+
+<div class="act-row"><button class="btn-m" onclick="markAll()">✓ Mark my homework</button><button class="btn-r" onclick="resetAll()">↺ Start again</button><span class="act-ct" id="ac">0 / 25 answered</span></div>
+<div class="res" id="resP">
+  <div class="res-title" id="rTi">Results</div><div class="res-bw"><div class="res-bf" id="rBar"></div></div>
+  <div class="res-grid"><div class="rc"><div class="rn" id="rOk">0</div><div class="rl">Correct</div></div><div class="rc"><div class="rn">25</div><div class="rl">Total</div></div><div class="rc"><div class="rn" id="rPct">0%</div><div class="rl">Score</div></div><div class="rc"><div class="rn" id="rGr">—</div><div class="rl">Grade</div></div></div>
+  <div class="rmsg" id="rMsg"></div>
+  <div style="font-size:13px;font-weight:600;color:var(--mut);margin-bottom:.5rem">Section breakdown:</div><div class="sec-bd" id="sBd"></div>
+  <div class="ss-box"><div class="ss-lbl">📤 Submit to Mr Gascoigne</div><div class="ss-hint">Any questions you found difficult? (optional)</div>
+  <textarea class="ss-ta" id="sDiff" rows="2" placeholder="e.g. Q7, Q19 — briefly describe what was tricky"></textarea>
+  <div class="sub-st"><button class="btn-m" id="btnSub" onclick="submitHW()">📤 Submit to Mr Gascoigne</button><div class="ss-msg" id="ssMsg"></div></div></div>
+</div>
+<div class="chal">
+  <div class="chal-lbl">★ Challenge 1</div>
+  <div class="chal-q">A deep-sea diver is at <span class='m'>−45 m</span>. She rises <span class='m'>18 m</span>, then descends <span class='m'>27 m</span>. What depth is she at now?</div>
+  <div class="chal-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:13px;color:var(--mut);min-width:110px">Depth (m):</span><input type="text" class="qi chal-input" id="c4a" placeholder="your answer" style="width:160px"><button class="btn-m" style="padding:8px 18px" onclick="c4a()">Check</button><span class="cres" id="cr_c4a"></span></div>
+  </div>
+</div>
+<div class="chal">
+  <div class="chal-lbl">★ Challenge 2</div>
+  <div class="chal-q">Is <span class='m'>(−4) × (−3)</span> positive or negative? Type positive or negative, then work out the value.</div>
+  <div class="chal-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:13px;color:var(--mut);min-width:110px">Pos or neg?</span><input type="text" class="qi chal-input" id="c4b" placeholder="your answer" style="width:160px"><button class="btn-m" style="padding:8px 18px" onclick="c4b()">Check</button><span class="cres" id="cr_c4b"></span></div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:13px;color:var(--mut);min-width:110px">Value:</span><input type="text" class="qi chal-input" id="c4c" placeholder="your answer" style="width:160px"><button class="btn-m" style="padding:8px 18px" onclick="c4c()">Check</button><span class="cres" id="cr_c4c"></span></div>
+  </div>
+</div>
+<div class="chal">
+  <div class="chal-lbl">★ Challenge 3</div>
+  <div class="chal-q">In a sale, a jacket costs <span class='m'>£14.49</span> after a <span class='m'>£5.50</span> discount. Three friends buy one each. To the nearest pound, how much does each person pay?</div>
+  <div class="chal-row" style="flex-direction:column;align-items:flex-start;gap:8px">
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:13px;color:var(--mut);min-width:110px">Sale price (£):</span><input type="text" class="qi chal-input" id="c4d" placeholder="your answer" style="width:160px"><button class="btn-m" style="padding:8px 18px" onclick="c4d()">Check</button><span class="cres" id="cr_c4d"></span></div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:13px;color:var(--mut);min-width:110px">Each person (£):</span><input type="text" class="qi chal-input" id="c4e" placeholder="your answer" style="width:160px"><button class="btn-m" style="padding:8px 18px" onclick="c4e()">Check</button><span class="cres" id="cr_c4e"></span></div>
+  </div>
+</div>
+
+</div>
+<script>
+const FORMSPREE_URL='https://formspree.io/f/YOUR_FORM_ID';
+const SHEET_URL='https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+const TEACHER_EMAIL='davidgascoigne@hotmail.com';
+let marked=false,wrongQs=[],secScores={1:0,2:0,3:0,4:0,5:0},totalOk=0;
+const SEC_TITLES={1:'Worded Decimals',2:'BIDMAS',3:'BIDMAS Brackets',4:'Adding Negatives',5:'Subtracting Negatives'};
+const WEEK_LABEL='Week 4';
+function nm(s){return s.trim().toLowerCase().replace(/\s+/g,'').replace(/[−–—]/g,'-').replace(/[x*]/g,'×').replace(/\//g,'÷').replace(/^£/,'')}
+function chk(u,a){return a.split('|').some(o=>nm(o)===nm(u))}
+function up(){const a=document.querySelectorAll('.q-ans'),f=[...a].filter(i=>i.value.trim()).length;document.getElementById('pl').textContent=f+' / '+a.length+' answered';document.getElementById('pp').textContent=Math.round(f/a.length*100)+'%';document.getElementById('pb').style.width=Math.round(f/a.length*100)+'%';document.getElementById('ac').textContent=f+' / '+a.length+' answered'}
+document.querySelectorAll('.q-ans').forEach(i=>i.addEventListener('input',up));
+function rss(sec){const r=document.querySelectorAll(`.q-ans[data-sec="${sec}"]`);let c=0;r.forEach(i=>{const row=i.closest('.qr');if(!row)return;const a=row.getAttribute('data-ans')||i.getAttribute('data-ans');if(a&&chk(i.value,a))c++});const el=document.getElementById('ss'+sec);if(el)el.textContent=c+' / 5';secScores[sec]=c}
+function markAll(){wrongQs=[];totalOk=0;document.querySelectorAll('.qr[data-ans]').forEach(row=>{const inp=row.querySelector('.q-ans'),ico=row.querySelector('.ico'),h=row.querySelector('.hint');if(!inp||!inp.value.trim())return;const ok=chk(inp.value,row.getAttribute('data-ans'));inp.classList.remove('ok','no');inp.classList.add(ok?'ok':'no');if(ico){ico.textContent=ok?'✓':'✗';ico.className='ico '+(ok?'ok':'no')}if(h){h.className='hint show '+(ok?'c':'w');h.textContent=ok?'Correct! ✓':'Answer: '+row.getAttribute('data-ans').split('|')[0]}if(ok)totalOk++;else{const qn=inp.getAttribute('data-qn');if(qn)wrongQs.push('Q'+qn)}});for(let s=1;s<=5;s++)rss(s);showRes();marked=true}
+function showRes(){const p=Math.round(totalOk/25*100);const gd=[['90','A*','Outstanding — exceptional work!'],['80','A','Excellent — strong understanding shown.'],['70','B','Good work — revisit any sections you dropped marks in.'],['60','C','Satisfactory — review the topics you found tricky.'],['50','D','Keep going — use your notes and try again.'],['0','E','Please see Mr Gascoigne for extra support.']];const[,g,m]=gd.find(([t])=>p>=+t)||gd[gd.length-1];document.getElementById('rOk').textContent=totalOk;document.getElementById('rPct').textContent=p+'%';document.getElementById('rGr').textContent=g;document.getElementById('rTi').textContent=totalOk+' / 25 — Grade '+g;document.getElementById('rBar').style.width=p+'%';document.getElementById('rMsg').textContent=m;const bd=document.getElementById('sBd');if(bd){bd.innerHTML='';for(let s=1;s<=5;s++){const sc=secScores[s];const cl=sc===5?'g5':sc===4?'g4':sc===3?'g3':sc<=1?'g1':'g2';bd.innerHTML+=`<div class="stile ${cl}"><div class="stn">${sc}/5</div><div class="stl">${SEC_TITLES[s]}</div></div>`}}document.getElementById('resP').classList.add('show');document.getElementById('resP').scrollIntoView({behavior:'smooth',block:'nearest'})}
+async function submitHW(){const name=document.getElementById('sName').value.trim();if(!name){alert('Please enter your full name first.');document.getElementById('sName').focus();return}if(!marked){alert('Please mark your homework first.');return}const diff=document.getElementById('sDiff').value.trim();const p=Math.round(totalOk/25*100);const ts=new Date().toLocaleString('en-GB');const sd=Object.entries(secScores).map(([s,sc])=>`${SEC_TITLES[s]}: ${sc}/5`).join(' | ');const wl=wrongQs.length>0?wrongQs.join(', '):'None';const payload={name,week:WEEK_LABEL,total:totalOk+'/25',percentage:p+'%',s1:secScores[1]+'/5',s2:secScores[2]+'/5',s3:secScores[3]+'/5',s4:secScores[4]+'/5',s5:secScores[5]+'/5',wrong_questions:wl,difficulties:diff||'None noted',timestamp:ts,_subject:`Year 8 HW ${WEEK_LABEL} — ${name} — ${totalOk}/25`,message:`Student: ${name}\nWeek: ${WEEK_LABEL}\nScore: ${totalOk}/25 (${p}%)\n\n${sd}\n\nWrong: ${wl}\n\nDifficulties: ${diff||'None'}\n\nSubmitted: ${ts}`};
+const se=document.getElementById('ssMsg');if(!navigator.onLine){se.className='ss-msg show error';se.textContent='📴 You are offline. Your work is saved — reconnect to the internet, then press Submit again.';return}se.className='ss-msg show sending';se.textContent='⏳ Submitting...';document.getElementById('btnSub').disabled=true;
+let errs=[];
+try{const r=await fetch(FORMSPREE_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});if(!r.ok)errs.push('email')}catch{errs.push('email')}
+try{await fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})}catch{errs.push('sheet')}
+if(errs.length===0){se.className='ss-msg show sent';se.textContent='✅ Submitted! Mr Gascoigne has been notified. Well done, '+name.split(' ')[0]+'!'}else if(errs.length<2){se.className='ss-msg show sent';se.textContent='✅ Mostly submitted.'}else{se.className='ss-msg show error';se.textContent='❌ Failed. Screenshot and email davidgascoigne@hotmail.com';document.getElementById('btnSub').disabled=false}}
+function resetAll(){clearSaved();document.querySelectorAll('.q-ans').forEach(i=>{i.value='';i.classList.remove('ok','no')});document.querySelectorAll('.ico').forEach(i=>{i.textContent='';i.className='ico'});document.querySelectorAll('.hint').forEach(h=>{h.className='hint';h.textContent=''});for(let s=1;s<=5;s++){const el=document.getElementById('ss'+s);if(el)el.textContent='0 / 5'}document.getElementById('resP').classList.remove('show');document.getElementById('pb').style.width='0%';document.getElementById('pl').textContent='0 / 25 answered';document.getElementById('pp').textContent='0%';document.getElementById('ac').textContent='0 / 25 answered';document.getElementById('ssMsg').className='ss-msg';document.getElementById('sDiff').value='';document.getElementById('btnSub').disabled=false;marked=false;wrongQs=[];totalOk=0;secScores={1:0,2:0,3:0,4:0,5:0};document.querySelectorAll('.chal-input').forEach(i=>{i.value=''});document.querySelectorAll('.cres').forEach(e=>{e.textContent='';e.className='cres'})}
+function getNextMonday(){const d=new Date();const day=d.getDay();const add=day===1?7:(8-day)%7||7;d.setDate(d.getDate()+add);return d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
+(function(){const p=document.getElementById('duePill');if(p)p.textContent='📅 Due: '+getNextMonday()})();
+up();
+
+// ---- App features: autosave, offline, install ----
+const SAVE_KEY='igs-y8-w4-v1';
+function saveAll(){try{const d={};document.querySelectorAll('input[id],textarea[id]').forEach(e=>d[e.id]=e.value);document.querySelectorAll('.q-ans').forEach(e=>d['q'+e.dataset.qn]=e.value);localStorage.setItem(SAVE_KEY,JSON.stringify(d))}catch(e){}}
+function clearSaved(){try{localStorage.removeItem(SAVE_KEY)}catch(e){}}
+(function restore(){let d;try{d=JSON.parse(localStorage.getItem(SAVE_KEY)||'null')}catch(e){}if(!d)return;document.querySelectorAll('input[id],textarea[id]').forEach(e=>{if(d[e.id]!=null)e.value=d[e.id]});document.querySelectorAll('.q-ans').forEach(e=>{const v=d['q'+e.dataset.qn];if(v!=null)e.value=v});up()})();
+document.addEventListener('input',e=>{if(e.target.matches('input,textarea'))saveAll()});
+function netState(){document.getElementById('offl').classList.toggle('show',!navigator.onLine)}
+addEventListener('online',netState);addEventListener('offline',netState);netState();
+let deferredPrompt=null;const ib=document.getElementById('btnInstall');
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;ib.classList.add('show')});
+ib.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;ib.classList.remove('show')});
+addEventListener('appinstalled',()=>ib.classList.remove('show'));
+if('serviceWorker' in navigator&&location.protocol!=='file:'){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+
+function c4a(){const v=nm(document.getElementById('c4a').value),e=document.getElementById('cr_c4a');if(v==='-54'||v==='-54m'){e.className='cres ok';e.textContent='✓ Correct! −45+18=−27, −27−27=−54 m'}else{e.className='cres no';e.textContent='−45+18=−27, then −27−27=−54 m'}}
+function c4b(){const v=nm(document.getElementById('c4b').value),e=document.getElementById('cr_c4b');if(v==='positive'||v==='pos'||v==='+'){e.className='cres ok';e.textContent='✓ Correct! A negative × negative = positive.'}else{e.className='cres no';e.textContent='Positive — (−4)×(−3) = +12. Two negatives multiply to a positive.'}}
+function c4c(){const v=nm(document.getElementById('c4c').value),e=document.getElementById('cr_c4c');if(v==='12'||v==='+12'){e.className='cres ok';e.textContent='✓ Correct! (−4)×(−3) = 12'}else{e.className='cres no';e.textContent='(−4)×(−3) = 12 (two negatives)'}}
+function c4d(){const v=nm(document.getElementById('c4d').value),e=document.getElementById('cr_c4d');if(v==='9'||v==='£9'||v==='9pounds'){e.className='cres ok';e.textContent='✓ Correct! 14.49−5.50 = £8.99 ≈ £9'}else{e.className='cres no';e.textContent='£14.49 − £5.50 = £8.99, rounds to £9'}}
+function c4e(){const v=nm(document.getElementById('c4e').value),e=document.getElementById('cr_c4e');if(v==='4'||v==='£4'||v==='4.0'||v==='4.00'){e.className='cres ok';e.textContent='✓ Correct! £4.00 each'}else{e.className='cres no';e.textContent='£8.99 + £3.01 = £12.00. £12 ÷ 3 = £4 each'}}
+
+</script></body></html>
